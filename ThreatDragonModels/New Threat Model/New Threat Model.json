@@ -1,0 +1,29 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "New Threat Model",
+    "owner": "Group №5 (SSD)",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Jakh"
+      },
+      {
+        "name": "Dmitriy"
+      },
+      {
+        "name": "Asad"
+      },
+      {
+        "name": "Alex"
+      }
+    ],
+    "diagrams": [],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
