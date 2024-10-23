@@ -47,6 +47,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -130,7 +131,6 @@
               ]
             },
             "id": "7b7bd81d-94b7-4ac0-b2fb-c0ce2feaed05",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "User",
@@ -163,6 +163,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -246,7 +247,6 @@
               ]
             },
             "id": "958d0df2-f839-4348-971f-b9d13abbd243",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Mobile App",
@@ -288,6 +288,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -371,7 +372,6 @@
               ]
             },
             "id": "f0dcabc7-cfd8-4b5d-bc5a-54f80834c44b",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "Data Center",
@@ -408,6 +408,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -491,7 +492,6 @@
               ]
             },
             "id": "6c9a5d44-d75b-4c8e-be2b-594a10bbba17",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Vehicle Tracking Devices",
@@ -533,6 +533,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -616,7 +617,6 @@
               ]
             },
             "id": "b3adcc4b-84cf-43b8-be00-60c33b147d76",
-            "zIndex": 5,
             "data": {
               "type": "tm.Store",
               "name": "Navigation Data",
@@ -656,6 +656,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -739,7 +740,6 @@
               ]
             },
             "id": "e9c280d0-988c-417a-bf2c-8b05d29f908c",
-            "zIndex": 6,
             "data": {
               "type": "tm.Store",
               "name": "Driver Feedback",
@@ -779,6 +779,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -862,7 +863,6 @@
               ]
             },
             "id": "68903e2a-e2e7-43e3-a9d9-9238edf3e885",
-            "zIndex": 7,
             "data": {
               "type": "tm.Store",
               "name": "Weather Data",
@@ -905,6 +905,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -988,7 +989,6 @@
               ]
             },
             "id": "60611ef2-eef6-4898-bd5c-a4285427b373",
-            "zIndex": 8,
             "data": {
               "type": "tm.Store",
               "name": "Vehicle Performance Data",
@@ -1028,6 +1028,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 9,
             "ports": {
               "groups": {
                 "top": {
@@ -1111,7 +1112,6 @@
               ]
             },
             "id": "507e97a8-ccac-41e3-beb4-150a09112a21",
-            "zIndex": 9,
             "data": {
               "type": "tm.Store",
               "name": "Personal Data",
@@ -1148,6 +1148,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 10,
             "ports": {
               "groups": {
                 "top": {
@@ -1231,7 +1232,6 @@
               ]
             },
             "id": "839ca038-6c4d-4c9c-85da-8234fdc4ca18",
-            "zIndex": 10,
             "data": {
               "type": "tm.Process",
               "name": "4G/5G Network \n/\nSatellite Communication",
@@ -1674,13 +1674,13 @@
               "Data Flow"
             ],
             "id": "aabf8c43-e008-4ffa-9e8d-f418be1cd784",
+            "parent": "68903e2a-e2e7-43e3-a9d9-9238edf3e885",
             "source": {
               "cell": "68903e2a-e2e7-43e3-a9d9-9238edf3e885"
             },
             "target": {
               "cell": "68903e2a-e2e7-43e3-a9d9-9238edf3e885"
-            },
-            "parent": "68903e2a-e2e7-43e3-a9d9-9238edf3e885"
+            }
           },
           {
             "shape": "flow",
@@ -1931,6 +1931,218 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "d321af0f-6adb-4df3-9e81-365a2c68a077",
+            "source": {
+              "cell": "68903e2a-e2e7-43e3-a9d9-9238edf3e885"
+            },
+            "target": {
+              "cell": "f0dcabc7-cfd8-4b5d-bc5a-54f80834c44b"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "ed7a6a35-4dae-41c4-a26a-bdb65452fc10",
+            "source": {
+              "x": 696,
+              "y": 740
+            },
+            "target": {
+              "cell": "f0dcabc7-cfd8-4b5d-bc5a-54f80834c44b",
+              "port": "23651470-1b4a-487f-8e91-c263c041c50e"
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 840
+              },
+              {
+                "x": 30,
+                "y": 750
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "4334e7b7-0ff1-4b50-8d0c-db56e9da5332",
+            "source": {
+              "x": 866,
+              "y": 730
+            },
+            "target": {
+              "cell": "f0dcabc7-cfd8-4b5d-bc5a-54f80834c44b",
+              "port": "23651470-1b4a-487f-8e91-c263c041c50e"
+            },
+            "vertices": [
+              {
+                "x": 710,
+                "y": 820
+              },
+              {
+                "x": 170,
+                "y": 790
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Data Flow"
+                  }
+                }
+              }
+            ],
+            "id": "6d93f1c3-47b4-491e-81c7-7710c9e50569",
+            "source": {
+              "x": 400,
+              "y": 380
+            },
+            "target": {
+              "cell": "1f25434d-8c26-4480-afec-63ae55bbca7a",
+              "port": "9366508e-0bee-4286-be92-696fcc018020"
+            }
+          },
+          {
             "position": {
               "x": 300,
               "y": 248.66666666666674
@@ -1951,6 +2163,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -2034,7 +2247,6 @@
               ]
             },
             "id": "9baa2f00-a7f2-4baa-87e1-95cdf2f4f3d3",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "Firewalls",
@@ -2070,6 +2282,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -2153,7 +2366,6 @@
               ]
             },
             "id": "d5751e78-b84f-4103-9071-e0720cf54a6c",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
               "name": "Encryption Modules",
@@ -2189,6 +2401,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -2272,7 +2485,6 @@
               ]
             },
             "id": "1f25434d-8c26-4480-afec-63ae55bbca7a",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "Access Control",
@@ -2308,6 +2520,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -2391,7 +2604,6 @@
               ]
             },
             "id": "b3cfe662-e921-46f5-bfe3-ec047da545f7",
-            "zIndex": 14,
             "data": {
               "type": "tm.Actor",
               "name": "Analytics Engine",
