@@ -655,8 +655,8 @@
                 "text": "Security check / controls"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -752,39 +752,12 @@
               "description": "It will include filtering data processes\nFirewalls\nEncryption modules\nAccess Control",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": [
-                {
-                  "id": "ef4d1db1-0c48-4684-b382-9ece9aecc0f6",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Spoofing",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 2,
-                  "score": ""
-                },
-                {
-                  "id": "aaecd3d0-e7b9-4d29-a41d-5bde1ef1748c",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Spoofing",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 3,
-                  "score": ""
-                }
-              ]
+              "threats": []
             },
             "children": []
           },
@@ -867,6 +840,10 @@
               {
                 "x": 230,
                 "y": 470
+              },
+              {
+                "x": 290,
+                "y": 510
               },
               {
                 "x": 330,
@@ -1119,17 +1096,16 @@
               "cell": "5394729a-c48d-4790-ac80-aead8a15855b",
               "port": "89522a8d-2e47-48c5-ab04-9fc6373fa478"
             },
-            "vertices": [],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "vertices": [
+              {
+                "x": 800,
+                "y": 626
+              },
+              {
+                "x": 840,
+                "y": 590
+              }
+            ]
           },
           {
             "shape": "flow",
