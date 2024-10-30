@@ -1,5 +1,5 @@
 {
-  "version": "2.2.0",
+  "version": "v2.3.0-RC1",
   "summary": {
     "title": "Threat Models",
     "owner": "G5",
@@ -9,15 +9,6 @@
   "detail": {
     "contributors": [],
     "diagrams": [
-      {
-        "id": 0,
-        "title": "LuminaX",
-        "diagramType": "STRIDE",
-        "placeholder": "New STRIDE diagram description",
-        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
-        "version": "2.2.0",
-        "cells": []
-      },
       {
         "id": 1,
         "title": "PitriX",
@@ -2375,9 +2366,18 @@
             }
           }
         ]
+      },
+      {
+        "id": 2,
+        "title": "LuminaX",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "v2.3.0-RC1",
+        "cells": []
       }
     ],
-    "diagramTop": 2,
+    "diagramTop": 3,
     "reviewer": "",
     "threatTop": 7
   }
