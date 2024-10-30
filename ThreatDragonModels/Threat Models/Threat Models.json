@@ -47,6 +47,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -130,7 +131,6 @@
               ]
             },
             "id": "0da14e94-a1d5-4d19-87b4-b800650db8c4",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Mobile",
@@ -163,6 +163,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -246,7 +247,6 @@
               ]
             },
             "id": "6d650c89-3a52-4209-89f6-dae88e97ddc9",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "4G / 5G",
@@ -279,6 +279,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -371,8 +372,7 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "zIndex": 3
+            }
           },
           {
             "position": {
@@ -395,6 +395,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -487,8 +488,7 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "zIndex": 4
+            }
           },
           {
             "position": {
@@ -511,6 +511,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -594,7 +595,6 @@
               ]
             },
             "id": "789dd824-c10e-429e-b86e-318d3dfb15a0",
-            "zIndex": 5,
             "data": {
               "type": "tm.Actor",
               "name": "",
@@ -627,6 +627,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -710,7 +711,6 @@
               ]
             },
             "id": "e29fd4ba-a238-4bee-9a85-b429dbc2aa5b",
-            "zIndex": 6,
             "data": {
               "type": "tm.Process",
               "name": "Security check / controls",
@@ -1038,38 +1038,6 @@
             ]
           },
           {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Trust Boundary"
-                  }
-                }
-              }
-            ],
-            "id": "bf687a3b-2393-43dc-b81e-01456a6385dd",
-            "source": {
-              "x": 510,
-              "y": 690
-            },
-            "target": {
-              "x": 1140,
-              "y": 100
-            }
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -1320,6 +1288,92 @@
             }
           },
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "bf687a3b-2393-43dc-b81e-01456a6385dd",
+            "source": {
+              "x": 750,
+              "y": 630
+            },
+            "target": {
+              "x": 1140,
+              "y": 100
+            },
+            "vertices": [
+              {
+                "x": 890,
+                "y": 130
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "8094415b-08d1-4d7e-9d7d-9a4222b1d7a0",
+            "source": {
+              "x": 340,
+              "y": 560
+            },
+            "target": {
+              "x": 660,
+              "y": 750
+            },
+            "vertices": [
+              {
+                "x": 610,
+                "y": 460
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
+          },
+          {
             "position": {
               "x": 640,
               "y": 610
@@ -1345,6 +1399,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1428,7 +1483,6 @@
               ]
             },
             "id": "c341fb0c-5cb7-45b8-a846-c7df1053673b",
-            "zIndex": 11,
             "data": {
               "type": "tm.Store",
               "name": "Data Store",
@@ -1485,6 +1539,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1568,7 +1623,6 @@
               ]
             },
             "id": "5394729a-c48d-4790-ac80-aead8a15855b",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
               "name": "Analytical engine",
@@ -1607,6 +1661,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1690,7 +1745,6 @@
               ]
             },
             "id": "5546a7fc-e35b-4d6a-962c-1dac4c280832",
-            "zIndex": 13,
             "data": {
               "type": "tm.Store",
               "name": "Vehicle performance data",
@@ -1730,6 +1784,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -1826,8 +1881,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 14
+            }
           },
           {
             "position": {
@@ -1853,6 +1907,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1949,8 +2004,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 15
+            }
           },
           {
             "position": {
@@ -1976,6 +2030,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -2072,8 +2127,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 16
+            }
           },
           {
             "position": {
@@ -2099,6 +2153,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -2195,8 +2250,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 17
+            }
           }
         ]
       }
