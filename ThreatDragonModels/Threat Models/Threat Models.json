@@ -27,6 +27,41 @@
         "version": "2.2.0",
         "cells": [
           {
+            "shape": "edge",
+            "attrs": {
+              "line": {
+                "targetMarker": {
+                  "name": "block",
+                  "width": 12,
+                  "height": 8
+                }
+              }
+            },
+            "id": "0d8f577f-7de0-4c02-a6ce-63a67f03c2a1",
+            "zIndex": 0,
+            "source": {
+              "cell": "e29fd4ba-a238-4bee-9a85-b429dbc2aa5b",
+              "port": "dbef57e2-3e5e-4d2e-a2bc-bed2ad775e83"
+            },
+            "target": {
+              "x": 460,
+              "y": 560
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            }
+          },
+          {
             "position": {
               "x": 440,
               "y": 70
@@ -620,8 +655,8 @@
                 "text": "Security check / controls"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -717,14 +752,35 @@
               "description": "It will include filtering data processes\nFirewalls\nEncryption modules\nAccess Control",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ef4d1db1-0c48-4684-b382-9ece9aecc0f6",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 2,
+                  "score": ""
+                }
+              ]
             },
-            "children": []
+            "children": [],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -1334,7 +1390,7 @@
             "data": {
               "type": "tm.Boundary",
               "name": "Trust Boundary",
-              "description": "",
+              "description": "communication between security and data store",
               "isTrustBoundary": true,
               "hasOpenThreats": false
             },
@@ -1350,28 +1406,34 @@
             "id": "8094415b-08d1-4d7e-9d7d-9a4222b1d7a0",
             "source": {
               "x": 340,
-              "y": 560
+              "y": 540
             },
             "target": {
               "x": 660,
-              "y": 750
+              "y": 730
             },
             "vertices": [
               {
+                "x": 600,
+                "y": 430
+              },
+              {
+                "x": 640,
+                "y": 430
+              },
+              {
                 "x": 610,
-                "y": 460
+                "y": 430
+              },
+              {
+                "x": 610,
+                "y": 450
+              },
+              {
+                "x": 640,
+                "y": 520
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "position": {
@@ -2257,6 +2319,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 2
   }
 }
