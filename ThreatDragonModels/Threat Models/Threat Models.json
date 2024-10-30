@@ -27,6 +27,27 @@
         "version": "2.2.0",
         "cells": [
           {
+            "position": {
+              "x": 1120,
+              "y": 144.00000000001717
+            },
+            "size": {
+              "width": 1110,
+              "height": 520.3124999999999
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "6712d903-faeb-447a-8221-c1be72292b38",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
             "shape": "edge",
             "attrs": {
               "line": {
@@ -1037,80 +1058,6 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Outgoing traffic",
-              "description": "It is a data which is going to be processed in Analytical engine",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "96a04829-e30f-47c0-86cc-143a1641dd13",
-                  "title": "Unauthorized modification",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Cyber threats attempting to modify or corrupt data in which cases an attacker could gain access to the information like vehicle performance, navigation, weather, personal data through tampering which could lead misleading diagnostics or corruption of the data",
-                  "mitigation": "implement strict access control and have regular integrity checks on the data store and log all access attempts",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 6,
-                  "score": "6"
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Outgoing traffic"
-            ],
-            "id": "547f7036-b79b-4cde-9c6b-f86e8149e544",
-            "source": {
-              "x": 750,
-              "y": 626
-            },
-            "target": {
-              "cell": "5394729a-c48d-4790-ac80-aead8a15855b",
-              "port": "89522a8d-2e47-48c5-ab04-9fc6373fa478"
-            },
-            "vertices": [
-              {
-                "x": 800,
-                "y": 626
-              },
-              {
-                "x": 840,
-                "y": 590
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
                 "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
@@ -1399,51 +1346,13 @@
             ],
             "id": "57e8bcde-211a-44bb-aaa6-6132c52374ac",
             "source": {
-              "x": 970,
-              "y": 540
+              "x": 1190,
+              "y": 570
             },
             "target": {
               "cell": "b8970343-3647-47c5-a030-ddddbb49f8e4",
               "port": "8e788635-5c05-4a25-84e2-e2835d97e9bf"
             }
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Trust Boundary"
-                  }
-                }
-              }
-            ],
-            "id": "bf687a3b-2393-43dc-b81e-01456a6385dd",
-            "source": {
-              "x": 750,
-              "y": 630
-            },
-            "target": {
-              "x": 1140,
-              "y": 100
-            },
-            "vertices": [
-              {
-                "x": 890,
-                "y": 130
-              }
-            ]
           },
           {
             "shape": "trust-boundary-curve",
@@ -1500,9 +1409,83 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Outgoing traffic",
+              "description": "It is a data which is going to be processed in Analytical engine",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "96a04829-e30f-47c0-86cc-143a1641dd13",
+                  "title": "Unauthorized modification",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Cyber threats attempting to modify or corrupt data in which cases an attacker could gain access to the information like vehicle performance, navigation, weather, personal data through tampering which could lead misleading diagnostics or corruption of the data",
+                  "mitigation": "implement strict access control and have regular integrity checks on the data store and log all access attempts",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Outgoing traffic"
+            ],
+            "id": "547f7036-b79b-4cde-9c6b-f86e8149e544",
+            "source": {
+              "x": 750,
+              "y": 626
+            },
+            "target": {
+              "cell": "5394729a-c48d-4790-ac80-aead8a15855b",
+              "port": "89522a8d-2e47-48c5-ab04-9fc6373fa478"
+            },
+            "vertices": [
+              {
+                "x": 820,
+                "y": 590
+              },
+              {
+                "x": 840,
+                "y": 570
+              }
+            ]
+          },
+          {
             "position": {
               "x": 640,
-              "y": 610
+              "y": 630
             },
             "size": {
               "width": 120,
@@ -1634,6 +1617,19 @@
                   "new": false,
                   "number": 1,
                   "score": ""
+                },
+                {
+                  "id": "ce995cee-36c3-4913-a2ba-05718530c98c",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 7,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -1646,8 +1642,8 @@
           },
           {
             "position": {
-              "x": 840,
-              "y": 490
+              "x": 940,
+              "y": 480
             },
             "size": {
               "width": 60,
@@ -1765,8 +1761,8 @@
           },
           {
             "position": {
-              "x": 1030,
-              "y": 170
+              "x": 1270,
+              "y": 195
             },
             "size": {
               "width": 120,
@@ -1888,8 +1884,8 @@
           },
           {
             "position": {
-              "x": 1030,
-              "y": 262
+              "x": 1250,
+              "y": 292
             },
             "size": {
               "width": 120,
@@ -2011,8 +2007,8 @@
           },
           {
             "position": {
-              "x": 1030,
-              "y": 364
+              "x": 1250,
+              "y": 394
             },
             "size": {
               "width": 120,
@@ -2134,8 +2130,8 @@
           },
           {
             "position": {
-              "x": 1030,
-              "y": 470
+              "x": 1250,
+              "y": 500
             },
             "size": {
               "width": 120,
@@ -2257,8 +2253,8 @@
           },
           {
             "position": {
-              "x": 1030,
-              "y": 560
+              "x": 1250,
+              "y": 590
             },
             "size": {
               "width": 120,
@@ -2383,6 +2379,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 6
+    "threatTop": 7
   }
 }
