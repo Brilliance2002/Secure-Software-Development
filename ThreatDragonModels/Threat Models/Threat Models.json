@@ -39,14 +39,6 @@
             },
             "id": "0d8f577f-7de0-4c02-a6ce-63a67f03c2a1",
             "zIndex": 0,
-            "source": {
-              "cell": "e29fd4ba-a238-4bee-9a85-b429dbc2aa5b",
-              "port": "dbef57e2-3e5e-4d2e-a2bc-bed2ad775e83"
-            },
-            "target": {
-              "x": 460,
-              "y": 560
-            },
             "data": {
               "type": "tm.Flow",
               "name": "Data Flow",
@@ -59,6 +51,14 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": []
+            },
+            "source": {
+              "cell": "e29fd4ba-a238-4bee-9a85-b429dbc2aa5b",
+              "port": "dbef57e2-3e5e-4d2e-a2bc-bed2ad775e83"
+            },
+            "target": {
+              "x": 460,
+              "y": 560
             }
           },
           {
@@ -527,8 +527,8 @@
           },
           {
             "position": {
-              "x": 79.99999999999972,
-              "y": 20.00000000000071
+              "x": 130,
+              "y": 20
             },
             "size": {
               "width": 487.5000000000002,
@@ -770,23 +770,30 @@
                   "new": true,
                   "number": 2,
                   "score": ""
+                },
+                {
+                  "id": "aaecd3d0-e7b9-4d29-a41d-5bde1ef1748c",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 3,
+                  "score": ""
                 }
               ]
             },
-            "children": [],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
-            }
+            "children": []
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -806,12 +813,31 @@
               "description": "It is a data which includes informations like amount of fuel, current location of vehicle using network connection via satellite or 4g/5g communication and it is in process to be analyzed and security checked till reaching data centre ",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a2996fab-b313-4e83-9f59-e54b2725ad22",
+                  "title": "Altered data",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Information which is altered before reaching data store in most cases it is not filtered or in the process of filtering",
+                  "mitigation": "Checking security signatures, user credentials and mac-address of vehicle device ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Incoming data traffic from vehicle device "
@@ -902,7 +928,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -922,12 +949,31 @@
               "description": "data traffic which is processed and analyzed through Analytical engine process ",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "8f098b64-d207-4c23-8ccf-a33f74125be2",
+                  "title": "Stolen data",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Data which stolen between server and client, most cases data can not reach end-point device",
+                  "mitigation": "Optimizing network performance via increasing QoS - quality of service functions in networking devices",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Outgoing traffic from data center "
@@ -943,8 +989,20 @@
             },
             "vertices": [
               {
+                "x": 430,
+                "y": 510
+              },
+              {
+                "x": 480,
+                "y": 400
+              },
+              {
                 "x": 480,
                 "y": 390
+              },
+              {
+                "x": 400,
+                "y": 320
               }
             ]
           },
@@ -1002,7 +1060,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1022,12 +1081,31 @@
               "description": "It is a data which is going to be processed in Analytical engine",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "96a04829-e30f-47c0-86cc-143a1641dd13",
+                  "title": "Unauthorized modification",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Cyber threats attempting to modify or corrupt data in which cases an attacker could gain access to the information like vehicle performance, navigation, weather, personal data through tampering which could lead misleading diagnostics or corruption of the data",
+                  "mitigation": "implement strict access control and have regular integrity checks on the data store and log all access attempts",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Outgoing traffic"
@@ -1041,7 +1119,17 @@
               "cell": "5394729a-c48d-4790-ac80-aead8a15855b",
               "port": "89522a8d-2e47-48c5-ab04-9fc6373fa478"
             },
-            "vertices": []
+            "vertices": [],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -2319,6 +2407,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 2
+    "threatTop": 6
   }
 }
