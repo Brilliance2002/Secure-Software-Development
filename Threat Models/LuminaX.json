@@ -1,0 +1,881 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "LumiaX",
+    "owner": "",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": [
+          {
+            "position": {
+              "x": 210,
+              "y": 60
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "User"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "id": "b5648ff8-67bc-4b54-88ca-ca840892eb41",
+            "data": {
+              "type": "tm.Actor",
+              "name": "User",
+              "description": "The end-user interacting with the system through the graphical user interface (GUI)",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 710,
+              "y": 50
+            },
+            "size": {
+              "width": 130,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Frontend"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 3,
+            "id": "f16c8170-259d-42ce-ae0a-038fed275188",
+            "data": {
+              "type": "tm.Process",
+              "name": "Frontend",
+              "description": "The web or mobile app handling requests from the user.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "825b9a5b-ab21-4f4d-a799-28fde10819d2",
+            "source": {
+              "x": 50,
+              "y": 80
+            },
+            "target": {
+              "x": 170,
+              "y": 0
+            },
+            "vertices": [
+              {
+                "x": 430,
+                "y": 220
+              },
+              {
+                "x": 460,
+                "y": 80
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request to Backend",
+              "description": "sending requests to backend services",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "45d66da7-dc18-46da-90b1-f586ccd976db",
+            "labels": [
+              "Request to Backend"
+            ],
+            "source": {
+              "cell": "f16c8170-259d-42ce-ae0a-038fed275188"
+            },
+            "target": {
+              "cell": "cbf65fd1-8270-428c-80ff-049af99bd269"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Store Flow ",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "173532ce-1631-40d6-89aa-93ccde292635",
+            "source": {
+              "cell": "35748a70-96be-4077-9bb3-633afd13b688"
+            },
+            "target": {
+              "cell": "8e10e253-63f1-481d-8e5c-f9c684751062"
+            },
+            "labels": [
+              "Data Store Flow "
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Model Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "8503af4f-3d9f-4630-94d3-9d1a19578dad",
+            "labels": [
+              "Model Data Flow"
+            ],
+            "source": {
+              "cell": "cbf65fd1-8270-428c-80ff-049af99bd269"
+            },
+            "target": {
+              "cell": "d25ec07c-d60c-41a6-bf28-e3ff558d167c"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Monitoring Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "c7abeaa7-87be-4428-8551-a10f8c320cc2",
+            "source": {
+              "cell": "35748a70-96be-4077-9bb3-633afd13b688"
+            },
+            "target": {
+              "cell": "864087e1-8444-46fb-bf9e-ace64a8f5a4b"
+            },
+            "labels": [
+              "Monitoring Data Flow"
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "17d337a7-ff4d-411e-8ce0-695d68657c8f",
+            "source": {
+              "x": 10,
+              "y": 620
+            },
+            "target": {
+              "x": 380,
+              "y": 730
+            },
+            "vertices": [
+              {
+                "x": 320,
+                "y": 450
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "a6fa8fd3-87bd-4013-b9a6-6f46b7ab620c",
+            "source": {
+              "x": 1050,
+              "y": 750
+            },
+            "target": {
+              "x": 890,
+              "y": 1010
+            },
+            "vertices": [
+              {
+                "x": 530,
+                "y": 730
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "984706a2-3d5e-476b-8a87-5260aa185de7",
+            "source": {
+              "x": 730,
+              "y": 20
+            },
+            "target": {
+              "x": 900,
+              "y": 220
+            },
+            "vertices": [
+              {
+                "x": 510,
+                "y": 240
+              },
+              {
+                "x": 750,
+                "y": 270
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Orchestration Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "8f53f7aa-e748-4ddc-b04a-ec92878bac09",
+            "source": {
+              "cell": "cbf65fd1-8270-428c-80ff-049af99bd269"
+            },
+            "target": {
+              "cell": "35748a70-96be-4077-9bb3-633afd13b688"
+            },
+            "labels": [
+              "Orchestration Data Flow"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Authentication Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "06394452-be82-4d87-b26f-0adc477c8456",
+            "source": {
+              "cell": "cbf65fd1-8270-428c-80ff-049af99bd269"
+            },
+            "target": {
+              "cell": "bd666dab-f2d6-4bd0-825f-8bec24378621"
+            },
+            "labels": [
+              "Authentication Flow"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "User input flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "d3330a61-f612-4c6d-9399-0e6ef4d2a705",
+            "source": {
+              "x": 270,
+              "y": 120
+            },
+            "target": {
+              "cell": "f16c8170-259d-42ce-ae0a-038fed275188"
+            },
+            "labels": [
+              "User input flow"
+            ],
+            "vertices": [
+              {
+                "x": 270,
+                "y": 160
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Secure Service Request Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "d2be3b78-746a-42cb-8c2c-9dad3543ff77",
+            "source": {
+              "cell": "bd666dab-f2d6-4bd0-825f-8bec24378621"
+            },
+            "target": {
+              "cell": "35748a70-96be-4077-9bb3-633afd13b688"
+            },
+            "labels": [
+              "Secure Service Request Flow"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Model Access Flow",
+              "description": "AI Engine retrieves or accesses models stored in the Private Cloud",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "4ab05518-7c59-4ba2-8961-be9c769aa7c2",
+            "source": {
+              "cell": "d25ec07c-d60c-41a6-bf28-e3ff558d167c"
+            },
+            "target": {
+              "x": 860,
+              "y": 930
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 910
+              }
+            ],
+            "labels": [
+              "Model Access Flow"
+            ]
+          },
+          {
+            "position": {
+              "x": 300,
+              "y": 290
+            },
+            "size": {
+              "width": 180,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "API Gateway"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 11,
+            "id": "cbf65fd1-8270-428c-80ff-049af99bd269",
+            "data": {
+              "type": "tm.Process",
+              "name": "API Gateway",
+              "description": "Manages communication between the frontend and backend services",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 35,
+              "y": 670
+            },
+            "size": {
+              "width": 90,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "AI Engine"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 12,
+            "id": "d25ec07c-d60c-41a6-bf28-e3ff558d167c",
+            "data": {
+              "type": "tm.Process",
+              "name": "AI Engine",
+              "description": "Where the TensorFlow Models and PyTorch Models are processed.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 130,
+              "y": 610
+            },
+            "size": {
+              "width": 250,
+              "height": 150
+            },
+            "attrs": {
+              "text": {
+                "text": "Orchestration\n\n\nContent generation\nData Analytics\nTask Automation"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 13,
+            "id": "35748a70-96be-4077-9bb3-633afd13b688",
+            "data": {
+              "type": "tm.Process",
+              "name": "Orchestration\n\n\nContent generation\nData Analytics\nTask Automation",
+              "description": "This process includes services like Content Generation, Data Analytics, Task Automation, and Authentication.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 600,
+              "y": 340.0000000000002
+            },
+            "size": {
+              "width": 190,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "Security Layer\n\nUser Authentication"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 14,
+            "id": "bd666dab-f2d6-4bd0-825f-8bec24378621",
+            "data": {
+              "type": "tm.Process",
+              "name": "Security Layer\n\nUser Authentication",
+              "description": "Contains the mechanisms that ensure security, such as AES-256-GCM encryption and OAuth 2.0 for authentication.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 860,
+              "y": 770
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Database/RDBMS"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 15,
+            "id": "8e10e253-63f1-481d-8e5c-f9c684751062",
+            "data": {
+              "type": "tm.Store",
+              "name": "Database/RDBMS",
+              "description": "This is where user data and other sensitive information are stored.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 860,
+              "y": 900
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Private Cloud"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "b59f70da-6f68-46dc-8933-f83a12297ff0",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Store",
+              "name": "Private Cloud",
+              "description": "This contains the TensorFlow and PyTorch Models and other essential backend data.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 630,
+              "y": 520
+            },
+            "size": {
+              "width": 200,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Monitoring & \nLogging Services"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "864087e1-8444-46fb-bf9e-ace64a8f5a4b",
+            "zIndex": 17,
+            "data": {
+              "type": "tm.Process",
+              "name": "Monitoring & \nLogging Services",
+              "description": "Prometheus, Grafana, and ELK Stack to monitor system health and log data.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 30
+  }
+}
